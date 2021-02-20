@@ -28,10 +28,15 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation( /*Your Code Here*/ ) {
-    /*Your Code Here*/
+function summation(numToSum) {
+    // create an array using numToSum as number of elements and adding the index of each element as the element's  value
+    const arr = Array.from(Array(numToSum), (x, index) => index + 1);
+    // add each element of arr to sum, then return sum
+    const sum = arr.reduce((total, num) => total + num, 0);
+    return sum;
 
 }
+
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
