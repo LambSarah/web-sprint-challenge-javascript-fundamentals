@@ -129,8 +129,8 @@ function USApop(zooAnimals) {
  * The consume function should return the invocation of cb, passing a and b into cb as arguments
  */
 
-function consume( /*Your Code Here */ ) {
-    /*Your Code Here */
+function consume(a, b, cb) {
+    return cb(a, b);
 }
 
 
