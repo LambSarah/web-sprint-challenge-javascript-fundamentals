@@ -95,7 +95,7 @@ Using lowPopulationAnimals use .filter() to create a new array of objects which 
 */
 
 function lowPopulationAnimals(zooAnimals) {
-    // create array to hold our animal objects by iterating over zooAmimals and filtering out animals with population less than 5
+    // create array of animal objects by iterating over zooAmimals and filtering out animals with population less than 5
     const lowPopAnimals = zooAnimals.filter((animal) => {
         return animal.population < 5;
     });
@@ -111,8 +111,13 @@ Using USApop find the total population from the zoos array using the .reduce() m
 Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
 */
 
-function USApop( /*Your Code Here*/ ) {
-    /*Your Code Here*/
+function USApop(zooAnimals) {
+    // Find total USA population by adding each animals population to total
+    const totalPop = zooAnimals.reduce((total, animal) => {
+        return total + animal.population;
+    }, 0);
+    //return sum of zooAnimals population
+    return totalPop;
 }
 
 
@@ -145,7 +150,7 @@ function multiply( /*Your Code Here */ ) {
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
 function greeting( /*Your Code Here */ ) {
-    return /*Your Code Here */
+    return /*Your Code Here */;
 }
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
@@ -242,4 +247,4 @@ export default {
     greeting,
     CuboidMaker,
     CuboidMakerTwo
-}
+};
