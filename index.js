@@ -68,7 +68,7 @@ function animalNames(zooAnimals) {
     const names = zooAnimals.forEach((animal) => {
         displayNames.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
     });
-    // return array of displayNames 
+    // return array of string containing display names 
     return displayNames;
 }
 
@@ -80,11 +80,11 @@ For example: ['jackal, asiatic', .....]
 */
 
 function lowerCaseNames(zooAnimals) {
-    // iterate through zooAnimals names and for each animal add name in lowercase to lowerCaseNames
+    // iterate through zooAnimals and for each animal add name string in lowercase to lowerCaseNames
     const lowerCaseNames = zooAnimals.map((animal) => {
         return animal.animal_name.toLowerCase();
     });
-    //return array of lower case names
+    //return array of strings containing lower case names
     return lowerCaseNames;
 }
 
@@ -94,8 +94,14 @@ The zoo is concerned about animals with a lower population count.
 Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
 */
 
-function lowPopulationAnimals( /*Your Code Here*/ ) {
-    /*Your Code Here*/
+function lowPopulationAnimals(zooAnimals) {
+    // create array to hold our animal objects by iterating over zooAmimals and filtering out animals with population less than 5
+    const lowPopAnimals = zooAnimals.filter((animal) => {
+        return animal.population < 5;
+    });
+
+    //return array of animal objects whose population < 5
+    return lowPopAnimals;
 }
 
 
