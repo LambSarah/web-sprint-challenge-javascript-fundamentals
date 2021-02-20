@@ -116,7 +116,7 @@ function USApop(zooAnimals) {
     const totalPop = zooAnimals.reduce((total, animal) => {
         return total + animal.population;
     }, 0);
-    //return sum of zooAnimals population
+    //return total population
     return totalPop;
 }
 
